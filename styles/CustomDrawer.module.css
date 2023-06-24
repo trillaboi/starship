@@ -1,0 +1,39 @@
+.dBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dButton {
+    background-color: transparent !important;
+    font-size: 1.2rem !important;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+    padding: 0 0 0 0 !important;
+    margin-left: 1rem;
+  }
+  
+  .dButton:hover {
+    color: white;
+  }
+  
+  .dButton::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .dButton:hover::before {
+    transform: scaleX(1);
+  }
