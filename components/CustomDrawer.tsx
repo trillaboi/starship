@@ -17,11 +17,11 @@ export const CustomDrawer = ({ isOpen, onClose }: CustomDrawerProps) => {
     return(<>
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerContent
-            bgColor="#000"
-            borderLeft="2px solid white"
-
+            bgColor="#fff"
+            borderLeft="1px solid white"
+            paddingTop="4rem"
         >
-            <DrawerCloseButton color="#fff" />
+            <DrawerCloseButton color="#000" />
                 <DrawerBody className={styles.dBody}>
                     <Link href="/leaderboard">
                         <Button className={styles.dButton}>LEADERBOARD</Button>

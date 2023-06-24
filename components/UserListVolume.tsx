@@ -10,14 +10,14 @@ interface UserListProps {
 users: Address[];
 }
 
-export function UsersListProfit({ users }: UserListProps) {
+export function UsersListVolume({ users }: UserListProps) {
     return (
       <>
         {users.map((user, index) => (
               <div className={styles.itemContainer} key={index}>
                 <div>{index + 1}</div>
                 <div>{user.address}</div>
-                <div>{user.profit}</div>
+                <div>{user.volume}</div>
               </div>
         ))}
         </>

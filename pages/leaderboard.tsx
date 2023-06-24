@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import styles from '../styles/LeaderBoard.module.css';
 import { NavBar } from "../components/NavBar";
-import { UsersListProfit } from "../components/UsersListProfit";
+import { UsersListProfit, UsersListVolume } from "../components/UsersList";
 import React, { useState } from 'react';
 
 const LeaderBoard: NextPage = () => {
@@ -49,11 +49,7 @@ const LeaderBoard: NextPage = () => {
                     <UsersListProfit users={users} />
                 </div>
                 <div className={styles.leaderCard}>
-                    <div>User1</div>
-                    <div>User2</div>
-                    <div>User3</div>
-                    <div>User4</div>
-                    <div>User5</div>
+                    <UsersListVolume users={users} />
                 </div>
             </div>
             </div>
