@@ -19,7 +19,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'Startship',
+  appName: 'Starship',
   projectId: 'YOUR_PROJECT_ID',
   chains,
 });
