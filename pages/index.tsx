@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <div className={styles.main}>
         <div style={{display:"flex", flexDirection:"column"}}>
           <div className={styles.title}>
-            StarShip
+            Starship
           </div>
           <div className={styles.description}>
             A decentralized prediction marketplace.

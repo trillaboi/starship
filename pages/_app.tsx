@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider, darkTheme } from '@rainbow-me/rainbowkit';
+import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { arbitrum, goerli, mainnet, optimism, polygon } from 'wagmi/chains';
@@ -19,7 +19,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'Startship',
+  appName: 'Starship',
   projectId: 'YOUR_PROJECT_ID',
   chains,
 });
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <WagmiConfig config={wagmiConfig}>
-        <RainbowKitProvider chains={chains} theme={darkTheme()}>
+        <RainbowKitProvider chains={chains} >
           <Component {...pageProps} />
         </RainbowKitProvider>
       </WagmiConfig>

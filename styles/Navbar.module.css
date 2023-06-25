@@ -10,7 +10,8 @@
     color: #fff;
     background-size: cover;
     padding: 10px;
-    border-bottom:3px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
 }
 
 .homeLogo{

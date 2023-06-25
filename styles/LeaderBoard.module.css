@@ -24,11 +24,35 @@
 width: 100%;
 }
 
-.leaderCard {
-    border: 1px solid gray;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 8px;
+.cardContainer {
+    margin-top:1rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: 1150px;
+    padding: 1rem 2rem;
     border-radius: 8px;
-    background-color: black;
-    flex-direction: column;
-    min-width: 320px;
+    overflow-x: scroll;
+
 }
+
+.leaderCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid light-gray;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .leaderCard:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+

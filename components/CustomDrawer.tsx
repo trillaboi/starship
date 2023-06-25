@@ -14,30 +14,32 @@ type CustomDrawerProps = {
 }
 
 export const CustomDrawer = ({ isOpen, onClose }: CustomDrawerProps) => {
-    return(<>
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-        <DrawerContent
-            bgColor="#000"
-            borderLeft="2px solid white"
+    return(
+        <>
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+            <DrawerContent
+                bgColor="#fff"
+                borderLeft="1px solid white"
+                paddingTop="4rem"
+            >
+                <DrawerCloseButton color="#000" />
+                    <DrawerBody className={styles.dBody}>
+                        <Link href="/leaderboard">
+                            <Button className={styles.dButton}>LEADERBOARD</Button>
+                        </Link>
+                        <Link href="/markets">
+                            <Button className={styles.dButton}>MARKETS</Button>
+                        </Link>
+                        <Link href="/how-it-works">
+                            <Button className={styles.dButton}>HOW IT WORKS</Button>
+                        </Link>
+                        <Link href="/documentation">
+                            <Button className={styles.dButton}>DOCUMENTATION</Button>
+                        </Link>
 
-        >
-            <DrawerCloseButton color="#fff" />
-                <DrawerBody className={styles.dBody}>
-                    <Link href="/leaderboard">
-                        <Button className={styles.dButton}>LEADERBOARD</Button>
-                    </Link>
-                    <Link href="/rewards">
-                        <Button className={styles.dButton}>REWARDS</Button>
-                    </Link>
-                    <Link href="/how-it-works">
-                        <Button className={styles.dButton}>HOW IT WORKS</Button>
-                    </Link>
-                    <Link href="/documentation">
-                        <Button className={styles.dButton}>DOCUMENTATION</Button>
-                    </Link>
-
-                </DrawerBody>
-        </DrawerContent> 
-        </Drawer>
-        </>)
+                    </DrawerBody>
+            </DrawerContent> 
+            </Drawer>
+        </>
+    )
 }
