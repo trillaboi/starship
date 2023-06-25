@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 interface Market {
@@ -7,9 +6,7 @@ interface Market {
     description: string;
 
   }
-const MarketDetails = () => {
-    const router = useRouter();
-    const { id } = router.query;
+const MarketDetails = ({ id }: { id: number }) => {
     const [market, setMarket] = useState<Market | null>(null);
   
     useEffect(() => {
